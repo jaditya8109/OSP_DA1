@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>ADITYA | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" >
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#blog">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Hello, I'm <br><span>Aditya.</span></h2>
+            <h3>I'm a Web Developer.</h3>
+            <a href="" target="_blank" class="btn">My CV</a>
+        </div>
+        <div class="p50"  style="margin-top: 3em;">
+            <img src="meh.jpeg" class="proimg"  alt="Profile Image">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h2>I'm a Learner.</h2>
+                <p style="font-size: large; padding-top: 3em;">I have been learning Web development for about 6-7 months now. Apart from Web development, I have experience in programming languages such as C,C++,python. I have also worked on mySql. I can speak languages Hindi, English, Spanish and French. As I said, I am a learner, so i will probably keep falling down and getting up throughout.</p>
+            </div>
+            <div class="w50">
+                <img src="about.jpg" class="img" alt="Random Image">
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header= document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY>0);
+        });
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+        </script>
+    </body>
